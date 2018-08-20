@@ -18,19 +18,19 @@ public class Merchandising_Product {
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\WebDrivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		// driver.get("http://vmmain-pc:9330/NexxRetail/#/page/login");
-		driver.get("http://197.220.114.46:9633/#/merchandising/dashboard");
+		driver.get("http://vmmain-pc:9330/NexxRetail/#/page/login");
+		//driver.get("http://197.220.114.46:9633/#/merchandising/dashboard");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// Set username & password->Login
 
-		// driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sammy");
-		driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sysadmin");
+		driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sammy");
+		//driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sysadmin");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/button[text()='Next']")).click();
-		// driver.findElement(By.xpath("//*[@id='password']")).sendKeys("123@Asd");
-		driver.findElement(By.xpath("//*[@id='password']")).sendKeys("admin12347");
+		driver.findElement(By.xpath("//*[@id='password']")).sendKeys("123@Asd");
+		//driver.findElement(By.xpath("//*[@id='password']")).sendKeys("admin12347");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/button[text()='Login']")).click();
 
@@ -50,7 +50,7 @@ public class Merchandising_Product {
 		//driver.navigate().refresh();
 		//Thread.sleep(3000);
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		driver.findElement(By.xpath("//*/em[@class='icon-grid']")).click();
 		Thread.sleep(2000);
@@ -86,17 +86,18 @@ public class Merchandising_Product {
 				.getText().trim();
 
 		if (ActualPageTitle.contains(ExpectedPageTitle) && ActualText.contains(ExpectedText)) {
-			System.out.print(
+			System.out.println(
 					"Expected Page Title = " + ExpectedPageTitle + " | Actual Page Title = " + ActualPageTitle);
-			System.out.println("Expected Page Text = " + ExpectedText + " | Actual Page Text = " + ActualText);
+			System.out.println("Expected Page Text = " + ExpectedText);
+			System.out.println("Actual Page Text = " + ActualText);
 			System.out.println("Navigation to Product Master PASSSED");
 		}
 
 		else {
 			System.out.println(
 					"Expected Page Title = " + ExpectedPageTitle + " | Actual Page Title = " + ActualPageTitle);
-			System.out.println("Expected Page Text = " + ExpectedText + " | Actual Page Text = " + ActualText);
-
+			System.out.println("Expected Page Text = " + ExpectedText);
+			System.out.println("Actual Page Text = " + ActualText);
 			System.out.println("Navigation to Product Master FAILED");
 		}
 
