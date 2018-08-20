@@ -34,8 +34,10 @@ public class Login {
 		driver.findElement(By.xpath("//*/button[text()='Login']")).click();
 
 		Thread.sleep(2000);
-		
+
 		driver.navigate().refresh();
+		
+		Thread.sleep(2000);
 
 		String expectedText = "Merchandising Navigation".trim();
 
@@ -50,7 +52,9 @@ public class Login {
 		} else {
 			System.out.println("Login Test Failed");
 		}
-
+		
+		
+		
 		driver.close();
 
 	}
