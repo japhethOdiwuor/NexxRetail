@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="0" passed="0" failed="0" skipped="0">
+<testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-08-20T13:02:06Z" name="Default suite" finished-at="2018-08-20T13:02:06Z" duration-ms="8">
+  <suite started-at="2018-08-22T14:27:18Z" name="Default suite" finished-at="2018-08-22T14:27:47Z" duration-ms="28118">
     <groups>
     </groups>
-    <test started-at="2018-08-20T13:02:06Z" name="Default test" finished-at="2018-08-20T13:02:06Z" duration-ms="8">
+    <test started-at="2018-08-22T14:27:18Z" name="Default test" finished-at="2018-08-22T14:27:47Z" duration-ms="28118">
+      <class name="Merchandising.ProductMaster">
+        <test-method signature="openBrowser()[pri:1, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:18Z" name="openBrowser" finished-at="2018-08-22T17:27:23Z" duration-ms="4748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="setloginCredentials()[pri:2, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:23Z" name="setloginCredentials" finished-at="2018-08-22T17:27:28Z" duration-ms="4798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setloginCredentials -->
+        <test-method signature="verifyLogin()[pri:3, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:28Z" name="verifyLogin" finished-at="2018-08-22T17:27:29Z" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="navigateMerchandising()[pri:4, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:29Z" name="navigateMerchandising" finished-at="2018-08-22T17:27:40Z" duration-ms="10803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateMerchandising -->
+        <test-method signature="navigateProductMaster()[pri:5, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:40Z" name="navigateProductMaster" finished-at="2018-08-22T17:27:47Z" duration-ms="6790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateProductMaster -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:47Z" name="closeBrowser" finished-at="2018-08-22T17:27:50Z" duration-ms="3305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Merchandising.ProductMaster -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

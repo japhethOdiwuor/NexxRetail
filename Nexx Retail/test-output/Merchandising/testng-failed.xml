@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Merchandising]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="Nexx.Merch_ProductMaster_New">
+        <methods>
+          <include name="navigateMerchandising"/>
+          <include name="checkboxOneAtATime"/>
+          <include name="navigateProductMaster"/>
+        </methods>
+      </class> <!-- Nexx.Merch_ProductMaster_New -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Merchandising] -->

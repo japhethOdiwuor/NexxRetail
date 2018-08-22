@@ -1,29 +1,29 @@
-package Nexx;
+package Merchandising;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.Test;
 
-public class Login {
+public class loginTest {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static WebDriver driver;
 
-		// System.setProperty("webdriver.chrome.driver",
-		// "C:\\Users\\USER\\Desktop\\Nexx Automation\\Nexx
-		// Retail\\WebDrivers\\chromedriver.exe");
+	@Test(priority = 1)
+	public void openBrowser() {
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\WebDrivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		// driver.get("http://vmmain-pc:9330/NexxRetail/#/page/login");
+		driver = new ChromeDriver();
 		driver.get("http://197.220.114.46:9633/#/merchandising/dashboard");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
 
-		/*
-		 * Set username & password->Login
-		 */
+	@Test(priority = 2)
+	public void setloginCredentials() throws InterruptedException {
 		// driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sammy");
 		driver.findElement(By.xpath("//*[@id='1item']")).sendKeys("sysadmin");
 		Thread.sleep(2000);
@@ -32,31 +32,29 @@ public class Login {
 		driver.findElement(By.xpath("//*[@id='password']")).sendKeys("admin12347");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/button[text()='Login']")).click();
+	}
 
-		Thread.sleep(2000);
+	@Test(priority = 3)
+	public void verifyLogin() {
+		var buttonLogout = driver.findElement(By.xpath("//*/ul/li/a/em[@class='icon-logout']"));
 
-		driver.navigate().refresh();
-		
-		Thread.sleep(2000);
-
-		String expectedText = "Merchandising Navigation".trim();
-
-		var actualText = driver.findElement(By.xpath("//*/li[contains(normalize-space(),'Merchandising Navigation')]"))
-				.getText().toString().trim();
-
-		System.out.println("Expected Text = " + expectedText + " | Actual Text = " + actualText);
-
-		if (actualText.equals(expectedText)) {
-			System.out.println("Login Test Successful");
+		if (buttonLogout.isDisplayed()) {
+			System.out.println("Login Successful");
 
 		} else {
-			System.out.println("Login Test Failed");
+			System.out.println("Login Failed");
 		}
-		
-		
-		
-		driver.close();
 
 	}
+	
+	@AfterSuite
+	public void closeBrowser() throws InterruptedException {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a/em[@class='icon-logout']")).click();
+		Thread.sleep(1000);
+		driver.close();
+	}
+	
+	
 
 }
