@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Merchandising-&gt; Product Master]" guice-stage="DEVELOPMENT">
+  <test name="Product Master Functional Tests(failed)">
     <classes>
-      <class name="Merchandising.loginTest">
+      <class name="Merchandising.ProductMaster_SEARCH">
+        <methods>
+          <include name="b_searchBYcode"/>
+          <include name="a_navigate_ProductMaster"/>
+          <include name="c_searchBYdescription"/>
+        </methods>
+      </class> <!-- Merchandising.ProductMaster_SEARCH -->
+      <class name="Merchandising.ProductMaster_VIEW">
+        <methods>
+          <include name="verify_ListButton"/>
+          <include name="verify_viewProduct"/>
+          <include name="select_ProductToView"/>
+        </methods>
+      </class> <!-- Merchandising.ProductMaster_VIEW -->
+      <class name="Merchandising.ProductMaster">
         <methods>
           <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
         </methods>
-      </class> <!-- Merchandising.loginTest -->
+      </class> <!-- Merchandising.ProductMaster -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Product Master Functional Tests(failed) -->
+</suite> <!-- Failed suite [Merchandising-> Product Master] -->

@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>TestNG:  Product Master Functional Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Product Master Functional Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Aug 23 15:08:26 EAT 2018</td>
+</tr>
+<tr><td>Total time:</td><td>128 seconds (128836 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Merchandising.ProductMaster_SEARCH.a_navigate_ProductMaster()'><b>a_navigate_ProductMaster</b><br>Test class: Merchandising.ProductMaster_SEARCH</td>
+<td></td>
+<td>9</td>
+<td>Merchandising.ProductMaster_SEARCH@45b4c3a9</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_SEARCH.b_searchBYcode()'><b>b_searchBYcode</b><br>Test class: Merchandising.ProductMaster_SEARCH</td>
+<td></td>
+<td>5</td>
+<td>Merchandising.ProductMaster_SEARCH@45b4c3a9</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_SEARCH.c_searchBYdescription()'><b>c_searchBYdescription</b><br>Test class: Merchandising.ProductMaster_SEARCH</td>
+<td></td>
+<td>4</td>
+<td>Merchandising.ProductMaster_SEARCH@45b4c3a9</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_NEW.clickNew()'><b>clickNew</b><br>Test class: Merchandising.ProductMaster_NEW</td>
+<td></td>
+<td>9</td>
+<td>Merchandising.ProductMaster_NEW@5aebe890</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster.navigateMerchandising()'><b>navigateMerchandising</b><br>Test class: Merchandising.ProductMaster</td>
+<td></td>
+<td>10</td>
+<td>Merchandising.ProductMaster@4961f6af</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster.navigateProductMaster()'><b>navigateProductMaster</b><br>Test class: Merchandising.ProductMaster</td>
+<td></td>
+<td>8</td>
+<td>Merchandising.ProductMaster@4961f6af</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_NEW.navigateProductMaster()'><b>navigateProductMaster</b><br>Test class: Merchandising.ProductMaster_NEW</td>
+<td></td>
+<td>9</td>
+<td>Merchandising.ProductMaster_NEW@5aebe890</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_EditProduct.navigate_ProductMaster()'><b>navigate_ProductMaster</b><br>Test class: Merchandising.ProductMaster_EditProduct</td>
+<td></td>
+<td>11</td>
+<td>Merchandising.ProductMaster_EditProduct@65d09a04</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_VIEW.navigate_ProductMaster()'><b>navigate_ProductMaster</b><br>Test class: Merchandising.ProductMaster_VIEW</td>
+<td></td>
+<td>13</td>
+<td>Merchandising.ProductMaster_VIEW@33c911a1</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_NEW.openAccordions()'><b>openAccordions</b><br>Test class: Merchandising.ProductMaster_NEW</td>
+<td></td>
+<td>11</td>
+<td>Merchandising.ProductMaster_NEW@5aebe890</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_NEW.productDetailsAccordions()'><b>productDetailsAccordions</b><br>Test class: Merchandising.ProductMaster_NEW</td>
+<td></td>
+<td>0</td>
+<td>Merchandising.ProductMaster_NEW@5aebe890</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_EditProduct.select_ProductToEdit()'><b>select_ProductToEdit</b><br>Test class: Merchandising.ProductMaster_EditProduct</td>
+<td></td>
+<td>4</td>
+<td>Merchandising.ProductMaster_EditProduct@65d09a04</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_VIEW.select_ProductToView()'><b>select_ProductToView</b><br>Test class: Merchandising.ProductMaster_VIEW</td>
+<td></td>
+<td>4</td>
+<td>Merchandising.ProductMaster_VIEW@33c911a1</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_EditProduct.setEditDetails_Save()'><b>setEditDetails_Save</b><br>Test class: Merchandising.ProductMaster_EditProduct</td>
+<td></td>
+<td>4</td>
+<td>Merchandising.ProductMaster_EditProduct@65d09a04</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_EditProduct.verify_EditDetailsSaved()'><b>verify_EditDetailsSaved</b><br>Test class: Merchandising.ProductMaster_EditProduct</td>
+<td></td>
+<td>5</td>
+<td>Merchandising.ProductMaster_EditProduct@65d09a04</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_EditProduct.verify_EditProduct()'><b>verify_EditProduct</b><br>Test class: Merchandising.ProductMaster_EditProduct</td>
+<td></td>
+<td>5</td>
+<td>Merchandising.ProductMaster_EditProduct@65d09a04</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_VIEW.verify_ListButton()'><b>verify_ListButton</b><br>Test class: Merchandising.ProductMaster_VIEW</td>
+<td></td>
+<td>5</td>
+<td>Merchandising.ProductMaster_VIEW@33c911a1</td></tr>
+<tr>
+<td title='Merchandising.ProductMaster_VIEW.verify_viewProduct()'><b>verify_viewProduct</b><br>Test class: Merchandising.ProductMaster_VIEW</td>
+<td></td>
+<td>5</td>
+<td>Merchandising.ProductMaster_VIEW@33c911a1</td></tr>
+</table><p>
+</body>
+</html>

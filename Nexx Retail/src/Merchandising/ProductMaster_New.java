@@ -7,16 +7,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class ProductMaster_New extends loginTest {
+public class ProductMaster_NEW extends TestBase {
 
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void navigateProductMaster() throws InterruptedException {
-		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		System.out.println("--------------------------------");
 
-		System.out.println("---Navigating To Product Master---");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		Thread.sleep(7000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*/em[@class='icon-grid']")).click();
 
 		driver.findElement(By.partialLinkText("Merchandising")).click();
@@ -28,8 +27,9 @@ public class ProductMaster_New extends loginTest {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void clickNew() throws InterruptedException {
+		System.out.println("--------------------------------");
 
 		Thread.sleep(5000);
 		System.out.println("---Click on NEW Button->Navigate To create New Product---");
@@ -50,9 +50,10 @@ public class ProductMaster_New extends loginTest {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void productDetailsAccordions() {
-		System.out.println("---Get Accordions Available on Page---");
+		System.out.println("--------------------------------");
+
 		driver.findElement(By.xpath("//label[@class='ng-binding']//span[@class='fa fa-check']")).click();
 		List<WebElement> productDetails = driver.findElements(By.xpath("//*/div[@class='panel-group']/div/div[1]"));
 
@@ -65,9 +66,11 @@ public class ProductMaster_New extends loginTest {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void openAccordions() throws InterruptedException {
-		System.out.println("---Verify Click Action to close/open Accordion(s)---");
+		System.out.println("--------------------------------");
+
+		System.out.println("->Verify Click Action to close/open Accordion(s)");
 		for (int j = 1; j <= 4; j++) {
 			Thread.sleep(2000);
 			var tempText = driver.findElement(By.xpath("//*/div[@class='panel-group']/div[" + j + "]/div[1]/h4/a/span"))
@@ -104,6 +107,10 @@ public class ProductMaster_New extends loginTest {
 			}
 
 		}
+
+		// close product master ribbon
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*/a[@title='Product']/span")).click();
 	}
 
 }

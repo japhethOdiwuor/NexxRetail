@@ -1,37 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="5" passed="5" failed="0" skipped="0">
+<testng-results total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-08-22T14:27:18Z" name="Default suite" finished-at="2018-08-22T14:27:47Z" duration-ms="28118">
+  <suite started-at="2018-08-23T12:08:26Z" name="Merchandising Product Master" finished-at="2018-08-23T12:10:35Z" duration-ms="128836">
     <groups>
     </groups>
-    <test started-at="2018-08-22T14:27:18Z" name="Default test" finished-at="2018-08-22T14:27:47Z" duration-ms="28118">
-      <class name="Merchandising.ProductMaster">
-        <test-method signature="openBrowser()[pri:1, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:18Z" name="openBrowser" finished-at="2018-08-22T17:27:23Z" duration-ms="4748" status="PASS">
+    <test started-at="2018-08-23T12:08:26Z" name="Product Master Functional Tests" finished-at="2018-08-23T12:10:35Z" duration-ms="128836">
+      <class name="Merchandising.ProductMaster_VIEW">
+        <test-method signature="navigate_ProductMaster()[pri:12, instance:Merchandising.ProductMaster_VIEW@33c911a1]" started-at="2018-08-23T15:09:47Z" name="navigate_ProductMaster" finished-at="2018-08-23T15:10:00Z" duration-ms="13609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="setloginCredentials()[pri:2, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:23Z" name="setloginCredentials" finished-at="2018-08-22T17:27:28Z" duration-ms="4798" status="PASS">
+        </test-method> <!-- navigate_ProductMaster -->
+        <test-method signature="select_ProductToView()[pri:13, instance:Merchandising.ProductMaster_VIEW@33c911a1]" started-at="2018-08-23T15:10:00Z" name="select_ProductToView" finished-at="2018-08-23T15:10:05Z" duration-ms="4629" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setloginCredentials -->
-        <test-method signature="verifyLogin()[pri:3, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:28Z" name="verifyLogin" finished-at="2018-08-22T17:27:29Z" duration-ms="965" status="PASS">
+        </test-method> <!-- select_ProductToView -->
+        <test-method signature="verify_viewProduct()[pri:14, instance:Merchandising.ProductMaster_VIEW@33c911a1]" started-at="2018-08-23T15:10:05Z" name="verify_viewProduct" finished-at="2018-08-23T15:10:10Z" duration-ms="5467" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method signature="navigateMerchandising()[pri:4, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:29Z" name="navigateMerchandising" finished-at="2018-08-22T17:27:40Z" duration-ms="10803" status="PASS">
+        </test-method> <!-- verify_viewProduct -->
+        <test-method signature="verify_ListButton()[pri:0, instance:Merchandising.ProductMaster_VIEW@33c911a1]" started-at="2018-08-23T15:10:10Z" name="verify_ListButton" finished-at="2018-08-23T15:10:15Z" depends-on-methods="Merchandising.ProductMaster_VIEW.verify_viewProduct" duration-ms="5205" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateMerchandising -->
-        <test-method signature="navigateProductMaster()[pri:5, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:40Z" name="navigateProductMaster" finished-at="2018-08-22T17:27:47Z" duration-ms="6790" status="PASS">
+        </test-method> <!-- verify_ListButton -->
+      </class> <!-- Merchandising.ProductMaster_VIEW -->
+      <class name="Merchandising.ProductMaster_EditProduct">
+        <test-method signature="navigate_ProductMaster()[pri:7, instance:Merchandising.ProductMaster_EditProduct@65d09a04]" started-at="2018-08-23T15:09:15Z" name="navigate_ProductMaster" finished-at="2018-08-23T15:09:27Z" duration-ms="11532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_ProductMaster -->
+        <test-method signature="select_ProductToEdit()[pri:8, instance:Merchandising.ProductMaster_EditProduct@65d09a04]" started-at="2018-08-23T15:09:27Z" name="select_ProductToEdit" finished-at="2018-08-23T15:09:31Z" duration-ms="4625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_ProductToEdit -->
+        <test-method signature="verify_EditProduct()[pri:9, instance:Merchandising.ProductMaster_EditProduct@65d09a04]" started-at="2018-08-23T15:09:31Z" name="verify_EditProduct" finished-at="2018-08-23T15:09:36Z" duration-ms="5152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_EditProduct -->
+        <test-method signature="setEditDetails_Save()[pri:10, instance:Merchandising.ProductMaster_EditProduct@65d09a04]" started-at="2018-08-23T15:09:36Z" name="setEditDetails_Save" finished-at="2018-08-23T15:09:41Z" duration-ms="4828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setEditDetails_Save -->
+        <test-method signature="verify_EditDetailsSaved()[pri:11, instance:Merchandising.ProductMaster_EditProduct@65d09a04]" started-at="2018-08-23T15:09:41Z" name="verify_EditDetailsSaved" finished-at="2018-08-23T15:09:47Z" duration-ms="5222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_EditDetailsSaved -->
+      </class> <!-- Merchandising.ProductMaster_EditProduct -->
+      <class name="Merchandising.ProductMaster_NEW">
+        <test-method signature="navigateProductMaster()[pri:3, instance:Merchandising.ProductMaster_NEW@5aebe890]" started-at="2018-08-23T15:08:45Z" name="navigateProductMaster" finished-at="2018-08-23T15:08:55Z" duration-ms="9477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateProductMaster -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Merchandising.ProductMaster@305b7c14]" started-at="2018-08-22T17:27:47Z" name="closeBrowser" finished-at="2018-08-22T17:27:50Z" duration-ms="3305" status="PASS">
+        <test-method signature="clickNew()[pri:4, instance:Merchandising.ProductMaster_NEW@5aebe890]" started-at="2018-08-23T15:08:55Z" name="clickNew" finished-at="2018-08-23T15:09:04Z" duration-ms="9207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickNew -->
+        <test-method signature="productDetailsAccordions()[pri:5, instance:Merchandising.ProductMaster_NEW@5aebe890]" started-at="2018-08-23T15:09:04Z" name="productDetailsAccordions" finished-at="2018-08-23T15:09:04Z" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productDetailsAccordions -->
+        <test-method signature="openAccordions()[pri:6, instance:Merchandising.ProductMaster_NEW@5aebe890]" started-at="2018-08-23T15:09:04Z" name="openAccordions" finished-at="2018-08-23T15:09:15Z" duration-ms="11033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAccordions -->
+      </class> <!-- Merchandising.ProductMaster_NEW -->
+      <class name="Merchandising.ProductMaster_SEARCH">
+        <test-method signature="a_navigate_ProductMaster()[pri:0, instance:Merchandising.ProductMaster_SEARCH@45b4c3a9]" started-at="2018-08-23T15:10:15Z" name="a_navigate_ProductMaster" finished-at="2018-08-23T15:10:25Z" duration-ms="9537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_navigate_ProductMaster -->
+        <test-method signature="b_searchBYcode()[pri:0, instance:Merchandising.ProductMaster_SEARCH@45b4c3a9]" started-at="2018-08-23T15:10:25Z" name="b_searchBYcode" finished-at="2018-08-23T15:10:30Z" duration-ms="5365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- b_searchBYcode -->
+        <test-method signature="c_searchBYdescription()[pri:0, instance:Merchandising.ProductMaster_SEARCH@45b4c3a9]" started-at="2018-08-23T15:10:30Z" name="c_searchBYdescription" finished-at="2018-08-23T15:10:35Z" duration-ms="4478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- c_searchBYdescription -->
+      </class> <!-- Merchandising.ProductMaster_SEARCH -->
+      <class name="Merchandising.ProductMaster">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Merchandising.ProductMaster@4961f6af]" started-at="2018-08-23T15:08:09Z" name="openBrowser" finished-at="2018-08-23T15:08:26Z" duration-ms="16755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="navigateMerchandising()[pri:1, instance:Merchandising.ProductMaster@4961f6af]" started-at="2018-08-23T15:08:26Z" name="navigateMerchandising" finished-at="2018-08-23T15:08:37Z" duration-ms="10755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateMerchandising -->
+        <test-method signature="navigateProductMaster()[pri:2, instance:Merchandising.ProductMaster@4961f6af]" started-at="2018-08-23T15:08:37Z" name="navigateProductMaster" finished-at="2018-08-23T15:08:45Z" duration-ms="8437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateProductMaster -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Merchandising.ProductMaster@4961f6af]" started-at="2018-08-23T15:10:35Z" name="closeBrowser" finished-at="2018-08-23T15:10:39Z" duration-ms="4209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- Merchandising.ProductMaster -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Product Master Functional Tests -->
+  </suite> <!-- Merchandising Product Master -->
 </testng-results>

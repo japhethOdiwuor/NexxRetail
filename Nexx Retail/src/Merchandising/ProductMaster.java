@@ -6,33 +6,34 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class ProductMaster extends loginTest {
+public class ProductMaster extends TestBase {
 
-	@Test(priority = 4)
+	@Test(priority = 1)
 	public void navigateMerchandising() throws InterruptedException {
+		System.out.println("--------------------------------");
 		driver.navigate().refresh();
 
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*/em[@class='icon-grid']")).click();
 
-		List<WebElement> dashOptions = driver
+		List<WebElement> moduleOptions = driver
 				.findElements(By.xpath("//*/li[@ng-repeat='app in applications.available']/a"));
 
-		for (int i = 0; i < dashOptions.size(); i++) {
+		for (int i = 0; i < moduleOptions.size(); i++) {
 			// var dashtext = driver.findElement(By.xpath("//*/li[@ng-repeat='app in
 			// applications.available']/a")).getText();
-			var dashtext = dashOptions.get(i).getText().toString();
+			var moduletext = moduleOptions.get(i).getText().toString();
 
-			System.out.println("dashboard option " + (i) + " = " + dashtext);
+			System.out.println("Module option " + (i) + " = " + moduletext);
 
 		}
 		driver.findElement(By.partialLinkText("Merchandising")).click();
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 2)
 	public void navigateProductMaster() throws InterruptedException {
-
+		System.out.println("--------------------------------");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/a[@title='Product']/span")).click();
 		Thread.sleep(2000);
@@ -62,6 +63,9 @@ public class ProductMaster extends loginTest {
 			System.out.println("Actual Page Text = " + ActualText);
 			System.out.println("Navigation to Product Master FAILED");
 		}
+		// close product master ribbon
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//*/a[@title='Product']/span")).click();
 	}
 
 }
