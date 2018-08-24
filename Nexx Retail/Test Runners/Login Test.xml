@@ -3,7 +3,7 @@
 <suite name="Verify Login">
   <test name="login to Nexx Retail" verbose="2">
     <classes>
-      <class name="Merchandising.LoginTest"/>
+      <class name="LoginTest.LoginTest"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->

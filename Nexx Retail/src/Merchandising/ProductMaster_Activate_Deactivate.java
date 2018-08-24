@@ -17,7 +17,7 @@ public class ProductMaster_Activate_Deactivate extends TestBase {
 	String inActiveproduct_CodeAfterSearch;
 
 	@Test(priority = 15)
-	public void navigate_ProductMaster() throws InterruptedException {
+	public void navigateTo_ProductMaster() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		System.out.println("---Navigating To Product Master---");
@@ -47,7 +47,7 @@ public class ProductMaster_Activate_Deactivate extends TestBase {
 	}
 
 	@Test(priority = 17)
-	public void activate_Product() throws InterruptedException {
+	public void ClickOn_activateProduct() throws InterruptedException {
 		Thread.sleep(5000);
 		// Accept from modal box pop-Up
 		driver.findElement(By.xpath("//*/div[@data-timer='null']//button[text()='Yes']")).click();
@@ -56,7 +56,7 @@ public class ProductMaster_Activate_Deactivate extends TestBase {
 	}
 
 	@Test(priority = 18)
-	public void verify_productActivated() throws InterruptedException {
+	public void Verify_productActivated() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@placeholder='Search']")).sendKeys(product_Code);
@@ -78,7 +78,7 @@ public class ProductMaster_Activate_Deactivate extends TestBase {
 	}
 
 	@Test(priority = 19)
-	public void deactivate_Product() throws InterruptedException {
+	public void ClickOn_deactivateProduct() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*/tr[1]/td/button[@id='deactivateBtn'][text()='Deactivate']")).click();
 
@@ -90,7 +90,7 @@ public class ProductMaster_Activate_Deactivate extends TestBase {
 	}
 
 	@Test(priority = 20)
-	public void verify_ProductDeactivated() throws InterruptedException {
+	public void Verify_ProductDeactivated() throws InterruptedException {
 		driver.findElement(By.xpath("//*[@placeholder='Search']")).sendKeys(product_Code);
 		driver.findElement(By.xpath("//*/button/span[text()='Search']")).click();
 		driver.findElement(By.xpath("//*/div/label/span[text()='Active']")).click();

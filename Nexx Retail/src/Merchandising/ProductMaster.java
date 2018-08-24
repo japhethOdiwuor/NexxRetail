@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class ProductMaster extends TestBase {
 
 	@Test(priority = 1)
-	public void navigateMerchandising() throws InterruptedException {
+	public void navigateTo_Merchandising() throws InterruptedException {
 		System.out.println("--------------------------------");
 		driver.navigate().refresh();
 
@@ -32,7 +32,7 @@ public class ProductMaster extends TestBase {
 	}
 
 	@Test(priority = 2)
-	public void navigateProductMaster() throws InterruptedException {
+	public void navigateTo_ProductMaster() throws InterruptedException {
 		System.out.println("--------------------------------");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/a[@title='Product']/span")).click();

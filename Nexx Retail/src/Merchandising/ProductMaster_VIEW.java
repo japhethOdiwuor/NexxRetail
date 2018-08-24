@@ -19,7 +19,7 @@ public class ProductMaster_VIEW extends TestBase {
 	Random rnd = new Random();
 
 	@Test(priority = 12)
-	public void navigate_ProductMaster() throws InterruptedException {
+	public void navigateTo_ProductMaster() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
@@ -54,7 +54,7 @@ public class ProductMaster_VIEW extends TestBase {
 	}
 
 	@Test(priority = 14)
-	public void verify_viewProduct() throws InterruptedException {
+	public void verify_viewProductButtonWorks() throws InterruptedException {
 		System.out.println("--------------------------------");
 		Thread.sleep(3000);
 		// verify edit button takes user to selected product edit page
@@ -92,8 +92,8 @@ public class ProductMaster_VIEW extends TestBase {
 
 	}
 
-	@Test(dependsOnMethods = "verify_viewProduct")
-	public void verify_ListButton() throws InterruptedException {
+	@Test(dependsOnMethods = "verify_viewProductButtonWorks")
+	public void Verify_ListButtonWorks() throws InterruptedException {
 		System.out.println("--------------------------------");
 		Thread.sleep(3000);
 		productDescriptionAfterList = driver.findElement(By.xpath("//*/table/tbody/tr[" + RowNumber + "]/td[3]"))

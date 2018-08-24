@@ -17,7 +17,7 @@ public class ProductMaster_SEARCH extends TestBase {
 	String prodDescriptionAfterSearch;
 
 	@Test
-	public void a_navigate_ProductMaster() throws InterruptedException {
+	public void a_navigateTo_ProductMaster() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -34,7 +34,7 @@ public class ProductMaster_SEARCH extends TestBase {
 	}
 
 	@Test
-	public void b_searchBYcode() throws InterruptedException {
+	public void b_TestSearchBYcode() throws InterruptedException {
 		System.out.println("Search by Product Code = " + productCode);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@placeholder='Search']")).sendKeys(productCode);
@@ -46,7 +46,7 @@ public class ProductMaster_SEARCH extends TestBase {
 	}
 
 	@Test
-	public void c_searchBYdescription() throws InterruptedException {
+	public void c_TestSearchBYdescription() throws InterruptedException {
 		System.out.println("--------------------------------");
 		driver.findElement(By.xpath("//*[@placeholder='Search']")).clear();
 		System.out.println("Search by Product Description = " + productDesciption);

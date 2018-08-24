@@ -10,12 +10,12 @@ import org.testng.annotations.Test;
 public class ProductMaster_NEW extends TestBase {
 
 	@Test(priority = 3)
-	public void navigateProductMaster() throws InterruptedException {
+	public void navigateTo_ProductMaster() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*/em[@class='icon-grid']")).click();
 
 		driver.findElement(By.partialLinkText("Merchandising")).click();
@@ -28,7 +28,7 @@ public class ProductMaster_NEW extends TestBase {
 	}
 
 	@Test(priority = 4)
-	public void clickNew() throws InterruptedException {
+	public void clickOn_NewButton() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		Thread.sleep(5000);
@@ -51,7 +51,7 @@ public class ProductMaster_NEW extends TestBase {
 	}
 
 	@Test(priority = 5)
-	public void productDetailsAccordions() {
+	public void GetAvailable_productDetailsAccordions() {
 		System.out.println("--------------------------------");
 
 		driver.findElement(By.xpath("//label[@class='ng-binding']//span[@class='fa fa-check']")).click();
@@ -67,7 +67,7 @@ public class ProductMaster_NEW extends TestBase {
 	}
 
 	@Test(priority = 6)
-	public void openAccordions() throws InterruptedException {
+	public void Verify_AccordionsOpen_OneAt_Atime() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		System.out.println("->Verify Click Action to close/open Accordion(s)");

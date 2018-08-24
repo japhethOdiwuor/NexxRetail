@@ -19,7 +19,7 @@ public class ProductMaster_EditProduct extends TestBase {
 	String productDescriptionAfterSave;
 
 	@Test(priority = 7)
-	public void navigate_ProductMaster() throws InterruptedException {
+	public void navigateTo_productMaster() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -56,7 +56,7 @@ public class ProductMaster_EditProduct extends TestBase {
 	}
 
 	@Test(priority = 9)
-	public void verify_EditProduct() throws InterruptedException {
+	public void verify_EditProductSuccessful() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		Thread.sleep(5000);
@@ -91,7 +91,7 @@ public class ProductMaster_EditProduct extends TestBase {
 	}
 
 	@Test(priority = 10)
-	public void setEditDetails_Save() throws InterruptedException {
+	public void setEditDetails_thenSave() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		// Random rnd = new Random();
@@ -112,7 +112,7 @@ public class ProductMaster_EditProduct extends TestBase {
 	}
 
 	@Test(priority = 11)
-	public void verify_EditDetailsSaved() throws InterruptedException {
+	public void verify_EditDetailsSavedSuccessfully() throws InterruptedException {
 		System.out.println("--------------------------------");
 
 		Thread.sleep(3000);
