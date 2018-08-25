@@ -1,47 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Merchandising Product Master]" guice-stage="DEVELOPMENT">
-  <test name="Product Master Functional Tests(failed)">
+  <test name="Verify- Table Pagination to Page 1 and Page 3(failed)">
     <classes>
-      <class name="Merchandising.ProductMaster">
+      <class name="Merchandising.ProductMaster_Pagination">
         <methods>
           <include name="setUp_openBrowser"/>
-          <include name="navigateTo_ProductMaster"/>
-          <include name="navigateTo_Merchandising"/>
+          <include name="tearDown_closeBrowser"/>
+          <include name="a_NavigateTo_productMaster"/>
         </methods>
-      </class> <!-- Merchandising.ProductMaster -->
-      <class name="Merchandising.ProductMaster_EditProduct">
-        <methods>
-          <include name="select_ProductToEdit"/>
-          <include name="navigateTo_productMaster"/>
-          <include name="verify_EditDetailsSavedSuccessfully"/>
-          <include name="setEditDetails_thenSave"/>
-          <include name="verify_EditProductSuccessful"/>
-        </methods>
-      </class> <!-- Merchandising.ProductMaster_EditProduct -->
-      <class name="Merchandising.ProductMaster_NEW">
-        <methods>
-          <include name="clickOn_NewButton"/>
-          <include name="Verify_AccordionsOpen_OneAt_Atime"/>
-          <include name="navigateTo_ProductMaster"/>
-          <include name="GetAvailable_productDetailsAccordions"/>
-        </methods>
-      </class> <!-- Merchandising.ProductMaster_NEW -->
-      <class name="Merchandising.ProductMaster_VIEW">
-        <methods>
-          <include name="Verify_ListButtonWorks"/>
-          <include name="select_ProductToView"/>
-          <include name="navigateTo_ProductMaster"/>
-          <include name="verify_viewProductButtonWorks"/>
-        </methods>
-      </class> <!-- Merchandising.ProductMaster_VIEW -->
-      <class name="Merchandising.ProductMaster_SEARCH">
-        <methods>
-          <include name="c_TestSearchBYdescription"/>
-          <include name="b_TestSearchBYcode"/>
-          <include name="a_navigateTo_ProductMaster"/>
-        </methods>
-      </class> <!-- Merchandising.ProductMaster_SEARCH -->
+      </class> <!-- Merchandising.ProductMaster_Pagination -->
     </classes>
-  </test> <!-- Product Master Functional Tests(failed) -->
+  </test> <!-- Verify- Table Pagination to Page 1 and Page 3(failed) -->
 </suite> <!-- Failed suite [Merchandising Product Master] -->

@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="LoginTest.LoginTest">
+      <class name="Merchandising.ProductMaster_Pagination">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyLogin"/>
-          <include name="setloginCredentials"/>
-          <include name="openBrowser"/>
+          <include name="setUp_openBrowser"/>
+          <include name="tearDown_closeBrowser"/>
+          <include name="a_NavigateTo_productMaster"/>
         </methods>
-      </class> <!-- LoginTest.LoginTest -->
+      </class> <!-- Merchandising.ProductMaster_Pagination -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

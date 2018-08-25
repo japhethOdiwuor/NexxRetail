@@ -8,6 +8,7 @@
 			<class name="Merchandising.ProductMaster_EditProduct" /><!-- Verify EDIT button Works as intended -->
 			<class name="Merchandising.ProductMaster_VIEW" /><!-- Verify VIEW button Works as intended -->
 			<class name="Merchandising.ProductMaster_SEARCH" /><!-- Verify Search By Product Code & Descrption -->
+			<class name="Merchandising.ProductMaster_Pagination" /><!-- Verify Table Pagination Works -->
 		</classes>
 	</test> <!-- Default test -->
 </suite> <!-- Default suite -->

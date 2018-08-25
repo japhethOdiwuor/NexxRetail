@@ -82,11 +82,13 @@ public class TestBase {
 		password = config.getProperty("password");
 
 		driver.findElement(By.xpath("//*[@id='1item']")).sendKeys(username);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/button[text()='Next']")).click();
 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		driver.findElement(By.xpath("//*[@id='password']")).sendKeys(password);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*/button[text()='Login']")).click();
 		Thread.sleep(2000);
 
